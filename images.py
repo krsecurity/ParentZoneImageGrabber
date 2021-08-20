@@ -1,6 +1,8 @@
 import requests # to get image from the web
 import shutil # to save it locally
-key = 'XXXXXXXXX'
+import sys # args
+
+key = sys.argv[0]
 for number in range(193420,215884):
     image_url = "https://api.iconnectdaily.net/api/v1/media/" + str(number) + "?key=" + key + "&size=full&u=2021-07-14T09:32:29"
     filename = image_url.split("/")[-1]
